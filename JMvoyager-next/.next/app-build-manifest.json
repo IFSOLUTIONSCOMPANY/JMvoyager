@@ -11,26 +11,6 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
-    "/destinations/afrique-du-sud/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/destinations/afrique-du-sud/page.js"
-    ],
-    "/voyages-organises/bresil/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/voyages-organises/bresil/page.js"
-    ],
-    "/voyages-organises/colombie/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/voyages-organises/colombie/page.js"
-    ],
-    "/voyages-organises/vietnam/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/voyages-organises/vietnam/page.js"
-    ],
     "/a-propos/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -40,6 +20,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/contact/page.js"
+    ],
+    "/voyages-organises/colombie/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/voyages-organises/colombie/page.js"
     ]
   }
 }

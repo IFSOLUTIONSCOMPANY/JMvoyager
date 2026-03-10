@@ -1,4 +1,4 @@
-// File: /Users/ayman/Documents/vscode/2026/JMvoyager/JMvoyager/JMvoyager-next/src/app/voyages-organises/colombie/page.tsx
+// File: /Users/ayman/Documents/vscode/2026/JMvoyager/JMvoyager-next/src/app/voyages-organises/colombie/page.tsx
 import * as entry from '../../../../../src/app/voyages-organises/colombie/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

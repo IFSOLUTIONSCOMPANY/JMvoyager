@@ -1,4 +1,4 @@
-// File: /Users/ayman/Documents/vscode/2026/JMvoyager/JMvoyager/JMvoyager-next/src/app/a-propos/page.tsx
+// File: /Users/ayman/Documents/vscode/2026/JMvoyager/JMvoyager-next/src/app/a-propos/page.tsx
 import * as entry from '../../../../src/app/a-propos/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
