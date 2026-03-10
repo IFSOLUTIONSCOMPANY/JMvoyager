@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { DESTINATIONS } from '@/lib/constants'
 
-type DropdownKey = 'destinations' | 'voyages' | 'apropos' | null
+type DropdownKey = 'destinations' | 'voyages' | null
 
 const continents = [
   { label: 'Afrique',          items: DESTINATIONS.afrique },
@@ -67,7 +67,7 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 shrink-0" aria-label="JM Voyager — Accueil">
             <div className="relative w-10 h-10">
-              <Image src="/images/Logooriginal.png" alt="JM Voyager" fill className="object-contain" />
+              <Image src="/images/Logooriginal2.png" alt="JM Voyager" fill className="object-contain" />
             </div>
             <span className={`font-display font-bold text-lg hidden sm:block transition-colors ${
               scrolled ? 'text-gray-900' : 'text-white'
@@ -153,38 +153,15 @@ export function Navbar() {
               )}
             </div>
 
-            {/* À propos dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => toggle('apropos')}
-                className={`px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-1.5 transition-colors ${
-                  scrolled ? 'text-gray-700 hover:text-gold hover:bg-gray-50' : 'text-white/90 hover:text-white hover:bg-white/10'
-                } ${activeDropdown === 'apropos' ? (scrolled ? 'text-gold bg-gray-50' : 'text-white bg-white/10') : ''}`}
-                aria-expanded={activeDropdown === 'apropos'}
-              >
-                À propos
-                <ChevronIcon open={activeDropdown === 'apropos'} />
-              </button>
-
-              {activeDropdown === 'apropos' && (
-                <div className="absolute top-full left-0 mt-2 w-52 bg-white rounded-2xl shadow-2xl border border-gray-100 py-2 animate-fade-in">
-                  {[
-                    { name: 'Notre histoire', href: '/a-propos' },
-                    { name: 'Notre équipe',   href: '/a-propos#equipe' },
-                    { name: 'Nos services',   href: '/a-propos#services' },
-                  ].map(item => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      onClick={() => setActiveDropdown(null)}
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-gold/5 hover:text-gold transition-colors"
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
+            {/* À propos */}
+            <Link
+              href="/a-propos"
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                scrolled ? 'text-gray-700 hover:text-gold hover:bg-gray-50' : 'text-white/90 hover:text-white hover:bg-white/10'
+              }`}
+            >
+              À propos
+            </Link>
 
             <Link
               href="/contact"
@@ -266,21 +243,9 @@ export function Navbar() {
               ))}
             </MobileSection>
 
-            <MobileSection
-              label="À propos"
-              expanded={mobileExpanded === 'apropos'}
-              onToggle={() => setMobileExpanded(prev => prev === 'apropos' ? null : 'apropos')}
-            >
-              {[
-                { name: 'Notre histoire', href: '/a-propos' },
-                { name: 'Notre équipe',   href: '/a-propos#equipe' },
-                { name: 'Nos services',   href: '/a-propos#services' },
-              ].map(item => (
-                <Link key={item.name} href={item.href} onClick={() => setMobileOpen(false)} className="block pl-6 py-2 text-sm text-gray-600 hover:text-gold">
-                  {item.name}
-                </Link>
-              ))}
-            </MobileSection>
+            <Link href="/a-propos" onClick={() => setMobileOpen(false)} className="block px-4 py-2.5 text-sm font-medium text-gray-700 hover:text-gold hover:bg-gray-50 rounded-lg">
+              À propos
+            </Link>
 
             <Link href="/contact" onClick={() => setMobileOpen(false)} className="block px-4 py-2.5 text-sm font-medium text-gray-700 hover:text-gold hover:bg-gray-50 rounded-lg">
               Contact

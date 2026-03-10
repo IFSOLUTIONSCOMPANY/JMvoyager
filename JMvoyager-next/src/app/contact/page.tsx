@@ -65,7 +65,7 @@ export default function ContactPage() {
             <div className="space-y-6">
               <SectionHeader tag="Nous joindre" title="Contact direct" />
 
-              <div className="mt-2 space-y-4">
+              <div className="mt-4 space-y-5">
                 {INFOS.map(info => {
                   const Icon = info.icon
                   const content = (
