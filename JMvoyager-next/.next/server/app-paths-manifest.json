@@ -1,9 +1,0 @@
-{
-  "/destinations/afrique-du-sud/page": "app/destinations/afrique-du-sud/page.js",
-  "/page": "app/page.js",
-  "/a-propos/page": "app/a-propos/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/voyages-organises/bresil/page": "app/voyages-organises/bresil/page.js",
-  "/voyages-organises/vietnam/page": "app/voyages-organises/vietnam/page.js",
-  "/voyages-organises/colombie/page": "app/voyages-organises/colombie/page.js"
-}
