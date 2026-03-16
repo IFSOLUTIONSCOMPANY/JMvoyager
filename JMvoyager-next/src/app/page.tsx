@@ -5,6 +5,7 @@ import { DestinationCard } from '@/components/ui/DestinationCard'
 import { VoyageCard } from '@/components/ui/VoyageCard'
 import { Button } from '@/components/ui/Button'
 import { VOYAGES, HOW_IT_WORKS, POPULAR_DESTINATIONS, CONTACT } from '@/lib/constants'
+import { TestimonialsCarousel } from '@/components/ui/TestimonialsCarousel'
 
 export const metadata: Metadata = {
   title: 'JM Voyager — Agence de voyages sur mesure',
@@ -182,7 +183,9 @@ export default function HomePage() {
       {/* ── Pourquoi JM Voyager ── */}
       <section className="py-24 bg-white">
         <div className="container-site">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+          {/* Benefits */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
             <div>
               <p className="section-tag mb-3">Pourquoi nous choisir</p>
               <h2 className="section-title mb-6">Une agence à taille humaine, un service premium</h2>
@@ -210,30 +213,31 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Témoignage */}
-            <div className="bg-brand-light rounded-3xl p-8 sm:p-10 border border-gray-100">
-              <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-gold fill-current" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </div>
-              <blockquote className="text-gray-700 text-lg leading-relaxed mb-6">
-                &ldquo;JM Voyager a organisé notre voyage en Colombie de A à Z. Tout était parfait —
-                les hôtels, les activités, le guide local. Une expérience inoubliable !&rdquo;
-              </blockquote>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-gold/20 rounded-full flex items-center justify-center text-gold font-bold text-sm">
-                  MK
+            {/* Chiffres clés */}
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { value: '6+',   label: 'Avis 5 étoiles' },
+                { value: '50+',  label: 'Destinations' },
+                { value: '100%', label: 'Sur mesure' },
+                { value: '24/7', label: 'Assistance' },
+              ].map(s => (
+                <div key={s.label} className="bg-brand-light rounded-2xl p-8 text-center border border-gray-100">
+                  <p className="font-display text-4xl font-bold text-gold mb-2">{s.value}</p>
+                  <p className="text-sm text-gray-500">{s.label}</p>
                 </div>
-                <div>
-                  <p className="font-semibold text-gray-900 text-sm">Marie K.</p>
-                  <p className="text-gray-400 text-xs">Voyage en Colombie — Avril 2025</p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
+
+          {/* Avis clients — carrousel pleine largeur */}
+          <div>
+            <p className="section-tag mb-3 text-center">Ils nous ont fait confiance</p>
+            <h3 className="font-display text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-10">
+              Ce que disent nos voyageurs
+            </h3>
+            <TestimonialsCarousel />
+          </div>
+
         </div>
       </section>
     </>
