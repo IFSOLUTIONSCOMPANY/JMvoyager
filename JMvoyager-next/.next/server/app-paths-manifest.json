@@ -1,6 +1,4 @@
 {
-  "/page": "app/page.js",
-  "/voyages-organises/colombie/page": "app/voyages-organises/colombie/page.js",
   "/contact/page": "app/contact/page.js",
-  "/a-propos/page": "app/a-propos/page.js"
+  "/page": "app/page.js"
 }
