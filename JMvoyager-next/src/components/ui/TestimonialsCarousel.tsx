@@ -5,13 +5,6 @@ import Image from 'next/image'
 
 const REVIEWS = [
   {
-    name: 'Marie K.',
-    initials: 'MK',
-    text: 'JM Voyager a organisé notre voyage en Colombie de A à Z. Tout était parfait — les hôtels, les activités, le guide local. Une expérience inoubliable !',
-    meta: 'Voyage en Colombie — Avril 2025',
-    photo: null,
-  },
-  {
     name: 'Séverine Decreus',
     initials: 'SD',
     text: 'Un énorme merci à l\'équipe JM Voyager pour notre superbe séjour à Bali 🇮🇩 ! Organisation parfaite du début à la fin, toujours disponibles et très pros. On s\'est sentis accompagnés tout au long du voyage, une expérience qu\'on renouvellera avec plaisir !',
@@ -67,7 +60,7 @@ export function TestimonialsCarousel() {
 
   useEffect(() => {
     if (paused) return
-    const id = setInterval(next, 5000)
+    const id = setInterval(next, 6000)
     return () => clearInterval(id)
   }, [paused, next])
 
