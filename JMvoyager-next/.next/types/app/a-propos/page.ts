@@ -1,8 +1,8 @@
-// File: /Users/ayman/Documents/vscode/2026/JMvoyager/JMvoyager-next/src/app/contact/page.tsx
-import * as entry from '../../../../src/app/contact/page.js'
+// File: /Users/ayman/Documents/vscode/2026/JMvoyager/JMvoyager-next/src/app/a-propos/page.tsx
+import * as entry from '../../../../src/app/a-propos/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
-type TEntry = typeof import('../../../../src/app/contact/page.js')
+type TEntry = typeof import('../../../../src/app/a-propos/page.js')
 
 type SegmentParams<T extends Object = any> = T extends Record<string, any>
   ? { [K in keyof T]: T[K] extends string ? string | string[] | undefined : never }
