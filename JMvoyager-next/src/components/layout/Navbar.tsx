@@ -163,14 +163,6 @@ export function Navbar() {
               À propos
             </Link>
 
-            <Link
-              href="/contact"
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                scrolled ? 'text-gray-700 hover:text-gold hover:bg-gray-50' : 'text-white/90 hover:text-white hover:bg-white/10'
-              }`}
-            >
-              Contact
-            </Link>
           </div>
 
           {/* CTA + Mobile toggle */}
@@ -245,10 +237,6 @@ export function Navbar() {
 
             <Link href="/a-propos" onClick={() => setMobileOpen(false)} className="block px-4 py-2.5 text-sm font-medium text-gray-700 hover:text-gold hover:bg-gray-50 rounded-lg">
               À propos
-            </Link>
-
-            <Link href="/contact" onClick={() => setMobileOpen(false)} className="block px-4 py-2.5 text-sm font-medium text-gray-700 hover:text-gold hover:bg-gray-50 rounded-lg">
-              Contact
             </Link>
 
             <div className="pt-3 pb-2">
